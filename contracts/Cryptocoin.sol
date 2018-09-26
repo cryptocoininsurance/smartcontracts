@@ -339,13 +339,12 @@ contract Cryptocoin is ERC20, Claimable {
   }
 
   
-  function burn(address account, uint256 amount) external {
-    require(account != 0);
-    require(amount <= _balances[account]);
+  function burn(uint256 amount) external {
+    require(amount <= _balances[msg.sender]);
 
     _totalSupply = _totalSupply.sub(amount);
-    _balances[account] = _balances[account].sub(amount);
-    emit Transfer(account, address(0), amount);
+    _balances[msg.sender] = _balances[msg.sender].sub(amount);
+    emit Transfer(msg.sender, address(0), amount);
   }
 
   function() public { } //Audit recommendation

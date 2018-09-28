@@ -328,7 +328,7 @@ contract Cryptocoin is ERC20, Claimable {
   {
       require(_accICO         != address(0));//audit recommendation
       require(_initialSupply  > 0);
-      name           = "Cryptocoin_ALFA_VERSION";
+      name           = "Cryptocoin";
       symbol         = "CCIN";
       decimals       = 18;
       accICO         = _accICO;

@@ -10,7 +10,7 @@ Etherscan Rinkeby links:
 * [Program and Test Methodology (en)](soon)  
 
 ## General
-  Information system consist of one ERC20 - compatible token processing smart contract -**Cryptocoin** All tokens intended for distribution are emitted at the time of Cryptocoin smart contract deployment. After deploy all this tokens keeped on single wallet__ - accICO.  
+  Information system consist of one ERC20 - compatible token processing smart contract - **Cryptocoin**. All tokens intended for distribution are emitted at the time of Cryptocoin smart contract deployment. After deploy all this tokens keeped on single wallet - **accICO**.  
 
 ## Contracts special metods review  
 

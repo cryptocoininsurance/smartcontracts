@@ -1,0 +1,123 @@
+Truffle Develop started at http://127.0.0.1:9545/
+
+Accounts:
+(0) 0x627306090abab3a6e1400e9345bc60c78a8bef57
+(1) 0xf17f52151ebef6c7334fad080c5704d77216b732
+(2) 0xc5fdf4076b8f3a5357c5e395ab970b5b54098fef
+(3) 0x821aea9a577a9b44299b9c15c88cf3087f3b5544
+(4) 0x0d1d4e623d10f9fba5db95830f7d3839406c6af2
+(5) 0x2932b7a2355d6fecc4b5c0b6bd44cc31df247a2e
+(6) 0x2191ef87e392377ec08e7c08eb105ef5448eced5
+(7) 0x0f4f2ac550a1b4e2280d04c21cea7ebd822934b5
+(8) 0x6330a553fc93768f612722bb8c2ec78ac90b3bbc
+(9) 0x5aeda56215b167893e80b4fe645ba6d5bab767de
+
+Private Keys:
+(0) c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
+(1) ae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f
+(2) 0dbbe8e4ae425a6d2687f1a7e3ba17bc98c673636790f1b8ad91193c05875ef1
+(3) c88b703fb08cbea894b6aeff5a544fb92e78a18e19814cd85da83b71f772aa6c
+(4) 388c684f0ba1ef5017716adb5d21a053ea8e90277d0868337519f97bede61418
+(5) 659cbb0e2411a44db63778987b1e22153c086a95eb6b18bdf89de078917abc63
+(6) 82d052c865f5763aad42add438569276c00d3d88a2d062d36b2bae914d58b8c8
+(7) aa3680d5d48a8283413f7a108367c7299ca73f553735860a87b08f39395618b7
+(8) 0f62d96d6675f32685bbdb8ac13cda7c23436f63efbb9d07700d8669ff12b7c4
+(9) 8d5366123cb560bb606379f90a0bfd4769eecc0557f1b362dcae9012b548b1e5
+
+Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
+
+⚠️  Important ⚠️  : This mnemonic was created for you by Truffle. It is not secure.
+Ensure you do not use it on production blockchains, or else you risk losing funds.
+
+truffle(develop)> Compiling ./contracts/Cryptocoin.sol...
+Compiling ./contracts/Migrations.sol...
+
+[0m[0m
+[0m  Contract: Cryptocoin functionality tests - 01[0m
+[0m    Another user (not owner) tries to change contract owner. 
+ Expected behaviour: The attempt is failed. And the owner has not changed[0m
+ERROR! - OK. Only owner can run method of change of owner Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 01.00_not owner_calls_method_of change of owner[0m[33m (71ms)[0m
+[0m    The owner tries to change contract owner . 
+ Expected behaviour: The process of owner changing had started. But owner had not changed. The additional steps are required[0m
+    [32m  ✓[0m[90m 01.01_owner_calls[0m[31m (77ms)[0m
+    [32m  ✓[0m[90m 01.01.0_check_the owner_after_first_action[0m
+[0m    Another user (not new owner) tries to end the change  of contract owner. 
+ Expected behaviour: The attempt is failed[0m
+ERROR! - OK. Only owner_new can end the change of contract owner Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 01.01.1_not new owner_tries_to_change user after first action[0m
+[0m     The new owner completes the change of owner. 
+ Expected behaviour: the sender of this transaction is new owner[0m
+    [32m  ✓[0m[90m 01.01.2_new_owner_is_finishing_the change of owner[0m[33m (54ms)[0m
+    [32m  ✓[0m[90m 01.01.3_check_owner_after_second_action[0m
+    [32m  ✓[0m[90m 01.01.4_check_pendingOwner[0m
+[0m     AccICO account transfers tokens to contract address 
+ Expected behaviour: The transfer has to happen[0m
+    [32m  ✓[0m[90m 01.01.5_transfer_tokens_to_this_contract[0m[31m (92ms)[0m
+ERROR! - OK. The tokens are not gotten Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 01.01.6_Other account tries to get_tokens_from_address_of_this_contract[0m[33m (57ms)[0m
+    [32m  ✓[0m[90m 01.01.7_Owner account tries to get_tokens_from_address of this_contract[0m[31m (117ms)[0m
+    [32m  ✓[0m[90m 01.01.8_Owner account tries to get_tokens_from_address of this_contract_Check_event=Transfer[0m
+
+[0m  Contract: Cryptocoin functionality tests - 02[0m
+[0m    Account transfers the tokens to other account, there are enough   tokens 
+ Expected behaviour: The attempt is successful. And the transfer has to happen[0m
+    [32m  ✓[0m[90m 02.01_transfer_from_accICO_account_to_other_account[0m[31m (88ms)[0m
+    [32m  ✓[0m[90m 02.01.01_transfer_from_accICO_account_to_other_account_Check_event[0m
+    [32m  ✓[0m[90m 02.01.02_transfer_from_accICO_account_to_other_account_Check_balance of sender[0m
+[0m    Account tries to transfer the tokens to other when the account is 0 or the account has not enough balance
+ Expected behaviour: The attempts are failed. And the transfers have not happen[0m
+ERROR! - OK. The transfer has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 02.02_transfer_from_accICO_to_0[0m[33m (41ms)[0m
+ERROR! - OK. The transfer has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 02.03_transfer_the_tokens_Amount_of transfer is more than the balance[0m[33m (49ms)[0m
+
+[0m  Contract: Cryptocoin functionality tests - 03[0m
+[0m    Account tries to give the allowance to account 0
+ Expected behaviour: The attempt is failed. The allowance is not gotten[0m
+ERROR! - OK. The allowance is not gotten. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.01_to give the allowance_to account 0[0m
+ERROR! - OK. The allowance is not gotten. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.02_to_increase the allowance_to account 0[0m
+ERROR! - OK. The allowance is not gotten. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.03_to_decrease the allowance_to account 0[0m[33m (42ms)[0m
+[0m    Account tries to give the allowance to account. Account of spender is not 0
+ Expected behaviour: The attempt is successful. The allowance is gotten[0m
+    [32m  ✓[0m[90m 03.04_to approve_2_to_3[0m[33m (67ms)[0m
+    [32m  ✓[0m[90m 03.04.01_to approve_2_to_3_Check_event[0m
+    [32m  ✓[0m[90m 03.05_to increase allowance_2_to_3[0m[33m (63ms)[0m
+    [32m  ✓[0m[90m 03.05.01_to increase allowance_2_to_3_Check_event[0m
+    [32m  ✓[0m[90m 03.06_to decrease allowance_2_to_3[0m[33m (60ms)[0m
+    [32m  ✓[0m[90m 03.05.01_to decrease allowance_2_to_3_Check_event[0m
+[0m    Account has gotten the tokens. Then spender of account tries call method @transferFrom@ in some cases when the transfer has not to happen
+ Expected behaviour: The attempts is failed. The transfers have not to happen[0m
+    [32m  ✓[0m[90m 03.06_transfer_from_accICO_account_to_other_account[0m[33m (72ms)[0m
+ERROR! - OK. The transfer has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.07_transferFrom_from_acc2_to account 0[0m[33m (48ms)[0m
+ERROR! - OK. The transfer has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.08_transferFrom_from_acc2_to other account. The amount of  the transfer  is more  than the allowance amount [0m[33m (51ms)[0m
+ERROR! - OK. The transfer has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 03.09_transferFrom_from_acc2_to other account. The amount of the transfer  is more than the balance amount [0m[31m (117ms)[0m
+[0m    Account has gotten the tokens. Then spender of account tries call method @transferFrom@  when the transfer has to happen
+ Expected behaviour: The attempt is successful. The transfer has to happen[0m
+    [32m  ✓[0m[90m 03.10_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer[0m[31m (81ms)[0m
+    [32m  ✓[0m[90m 03.10.1_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check event[0m
+    [32m  ✓[0m[90m 03.10.2_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check balance of account4[0m
+    [32m  ✓[0m[90m 03.10.3_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check allowance[0m
+
+[0m  Contract: Cryptocoin functionality tests - 04[0m
+[0m    Account burns their own tokens. The Token amount is more than the balance amount
+ Expected behaviour: The attempt is failed. totalSupply and balance of account have not decreased[0m
+ERROR! - OK. The burning has not happened. Error: VM Exception while processing transaction: revert
+    [32m  ✓[0m[90m 04.00_burn their own tokens unsuccessfully[0m[33m (62ms)[0m
+    [32m  ✓[0m[90m 04.03_burn their own tokens unsuccessfully. Check totalSupply[0m
+[0m    Account burns their own tokens
+ Expected behaviour: The attempt is successful. totalSupply and balance of account have decreased[0m
+    [32m  ✓[0m[90m 04.01_burn their own tokens successfully[0m[33m (59ms)[0m
+    [32m  ✓[0m[90m 04.02_burn their own tokens successfully. Check event[0m
+    [32m  ✓[0m[90m 04.03_burn their own tokens successfully. Check totalSupply[0m
+
+
+[92m [0m[32m 38 passing[0m[90m (2s)[0m
+
+truffle(develop)> 

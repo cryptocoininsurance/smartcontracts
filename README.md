@@ -6,8 +6,9 @@ Etherscan Rinkeby links:
 
 * [General](#general)
 * [Special metods(functions)](#contracts-special-metods-review)
-* [Testing](#testing)
 * [Deploy](#deploy)
+* [Testing](#testing)
+* [Testing log](20180928test.log)
 
 ## General
   Information system consist of one ERC20 - compatible token processing smart contract - **Cryptocoin**. All tokens intended for distribution are emitted at the time of Cryptocoin smart contract deployment. After deploy all this tokens keeped on single wallet - **accICO**.  

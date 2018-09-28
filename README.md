@@ -1,8 +1,7 @@
 #  Cryptocoin Insurance smart contract
 ![Smart contract deployed on Rinkeby test network](https://img.shields.io/badge/Rinkeby-deployed-green.svg)
 ![Smart contract waiting for deploy in Ethereum MainNet network](https://img.shields.io/badge/Mainnet-waiting-orange.svg)  
-Etherscan Rinkeby links:  
-[Cryptocoin](soon)  
+[Etherscan Rinkeby, deployed Cryptocoin](https://rinkeby.etherscan.io/address/0x0b229369f9093bcdc42e4b4a645817bb93f93baf#code)  
 
 * [General](#general)
 * [Special metods(functions)](#contracts-special-metods-review)

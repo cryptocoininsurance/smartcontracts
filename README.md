@@ -7,7 +7,8 @@
 * [Special metods(functions)](#contracts-special-metods-review)
 * [Deploy](#deploy)
 * [Testing](#testing)
-* [Testing log](20180928test.log)
+* [The program and methodology of testing](https://docs.google.com/spreadsheets/d/1nyZdzjfAawgaKJfSwIX6bcg4GlMDSro2N62A6v5ysuo/edit?usp=sharing)
+* [Testing log](20180930_test.log)
 
 ## General
   Information system consist of one ERC20 - compatible token processing smart contract - **Cryptocoin**. All tokens intended for distribution are emitted at the time of Cryptocoin smart contract deployment. After deploy all this tokens keeped on single wallet - **accICO**.  

@@ -138,7 +138,7 @@ describe('Account tries to give the allowance to account 0'
                 });
             });
 
-            it('03.05.01_to decrease allowance_2_to_3_Check_event', function() {
+            it('03.06.01_to decrease allowance_2_to_3_Check_event', function() {
                 assert.equal(event,'Approval', "the event has to be @Approval@");
                        
             });
@@ -146,7 +146,7 @@ describe('Account tries to give the allowance to account 0'
 
     describe('Account has gotten the tokens. Then spender of account tries call method @transferFrom@ in some cases when the transfer has not to happen'
                 +'\r\n Expected behaviour: The attempts is failed. The transfers have not to happen', function(){
-            it('03.06_transfer_from_accICO_account_to_other_account', function() {
+            it('03.07_transfer_from_accICO_account_to_other_account', function() {
   
   
                 return MyERC20.balanceOf.call(accounts[2]).then(function(callResult){
@@ -167,7 +167,7 @@ describe('Account tries to give the allowance to account 0'
                 });   
             }); 
 
-            it('03.07_transferFrom_from_acc2_to account 0', function() {
+            it('03.08_transferFrom_from_acc2_to account 0', function() {
                 return MyERC20.transferFrom(accounts[2],'0x0000000000000000000000000000000000000000',amount_transfer,{from: accounts[3], 
                                 gasPrice: web3.toWei(1,"Gwei")}).catch(function(err) {
                                     console.log("ERROR! - OK. The transfer has not happened.", err.toString());
@@ -183,7 +183,7 @@ describe('Account tries to give the allowance to account 0'
                 });   
             });
 
-            it('03.08_transferFrom_from_acc2_to other account. The amount of  the transfer  is more  than the allowance amount ', function() {
+            it('03.09_transferFrom_from_acc2_to other account. The amount of  the transfer  is more  than the allowance amount ', function() {
                 return MyERC20.allowance(accounts[2], accounts[3]).then(function(callResult){
                     //console.log('allowance_before=',callResult);
 
@@ -202,7 +202,7 @@ describe('Account tries to give the allowance to account 0'
             });
 
 
-            it('03.09_transferFrom_from_acc2_to other account. The amount of the transfer  is more than the balance amount ', function() {
+            it('03.10_transferFrom_from_acc2_to other account. The amount of the transfer  is more than the balance amount ', function() {
                 return MyERC20.increaseAllowance(accounts[3], 20, {from: accounts[2], gasPrice: web3.toWei(1,"Gwei")}).then(function(txResult){
                     return MyERC20.allowance(accounts[2], accounts[3]);
                 }).then(function(callResult){    
@@ -226,7 +226,7 @@ describe('Account tries to give the allowance to account 0'
     describe('Account has gotten the tokens. Then spender of account tries call method @transferFrom@  when the transfer has to happen'
                 +'\r\n Expected behaviour: The attempt is successful. The transfer has to happen', function(){
 
-            it('03.10_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer', function() {
+            it('03.11_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer', function() {
 
                 return MyERC20.allowance(accounts[2], accounts[3]).then(function(callResult){    
                    // console.log('allowance_before_______________=',callResult);
@@ -249,12 +249,12 @@ describe('Account tries to give the allowance to account 0'
             });
 
 
-            it('03.10.1_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check event', function() {
+            it('03.11.1_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check event', function() {
                 assert.equal(event,'Transfer', "the event has to be @Transfer@");
             });
 
             
-            it('03.10.2_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check balance of account4', function() {
+            it('03.11.2_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check balance of account4', function() {
                      return MyERC20.balanceOf(accounts[4]).then(function(callResult){    
                     //console.log('balanceAcc4After=',callResult);
                     
@@ -262,7 +262,7 @@ describe('Account tries to give the allowance to account 0'
                 });
             });
 
-            it('03.10.3_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check allowance', function() {
+            it('03.11.3_transferFrom_from_acc2_to other account. There are all conditions to happen the transfer. Check allowance', function() {
                      return MyERC20.allowance(accounts[2], accounts[3]).then(function(callResult){    
                     //console.log('allowance_after______________=',callResult);
                     //console.log('allowance_before______________=',allowance_before);

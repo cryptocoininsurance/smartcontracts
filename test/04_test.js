@@ -43,7 +43,7 @@ contract('Cryptocoin functionality tests - 04',function (accounts) {
 
 
     describe('Account burns their own tokens. The Token amount is more than the balance amount'
-                    +'\r\n Expected behaviour: The attempt is failed. totalSupply and balance of account have not decreased', function(){
+                    +'\r\n Expected behaviour: The attempt is failed. totalSupply and balance of account have not decrease', function(){
             it('04.00_burn their own tokens unsuccessfully', function() {
                     return MyERC20.balanceOf.call(AccICO).then(function(callResult){
                         balanceAccICOBefore=callResult;
@@ -63,7 +63,7 @@ contract('Cryptocoin functionality tests - 04',function (accounts) {
             });
 
 
-              it('04.03_burn their own tokens unsuccessfully. Check totalSupply', function() {
+              it('04.00.1_burn their own tokens unsuccessfully. Check totalSupply', function() {
                 return MyERC20.totalSupply().then(function(callResult){
                     //console.log('_totalSupply_after=', callResult);
                     assert.equal(callResult.minus(_totalSupply),0, "totalSupply has changed!!!");
@@ -75,7 +75,7 @@ contract('Cryptocoin functionality tests - 04',function (accounts) {
 
 
     describe('Account burns their own tokens'
-                    +'\r\n Expected behaviour: The attempt is successful. totalSupply and balance of account have decreased', function(){
+                    +'\r\n Expected behaviour: The attempt is successful. totalSupply and balance of account have to decrease', function(){
             it('04.01_burn their own tokens successfully', function() {
                     return MyERC20.balanceOf.call(AccICO).then(function(callResult){
                         balanceAccICOBefore=callResult;

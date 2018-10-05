@@ -1,7 +1,10 @@
 #  Cryptocoin Insurance smart contract
 ![Smart contract deployed on Rinkeby test network](https://img.shields.io/badge/Rinkeby-deployed-green.svg)
-![Smart contract waiting for deploy in Ethereum MainNet network](https://img.shields.io/badge/Mainnet-waiting-orange.svg)  
-[Etherscan Rinkeby, deployed Cryptocoin](https://rinkeby.etherscan.io/address/0x0b229369f9093bcdc42e4b4a645817bb93f93baf#code)  
+![Smart contract deployed in Ethereum MainNet network](https://img.shields.io/badge/Mainnet-deployed-green.svg)  
+[Etherscan Rinkeby, deployed Cryptocoin](https://rinkeby.etherscan.io/address/0x0b229369f9093bcdc42e4b4a645817bb93f93baf#code)
+
+[Etherscan MainNet, deployed Cryptocoin](https://etherscan.io/address/0x0e5d8cf7fedc38c4716eb7e2a55a1f040313deb2#code)
+
 
 * [General](#general)
 * [Special metods(functions)](#contracts-special-metods-review)
@@ -47,6 +50,8 @@ Please, keep secret keys very safely !!!
 Ok - now your smart contract (and  coin) ready for long happy life. Good Luck!!!
 
 
+
+
 Used Rinkeby accounts:
 ```
 Owner
@@ -57,3 +62,5 @@ accICO
 ae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f
 0xf17f52151EbEF6C7334FAD080c5704D77216b732
 ```
+
+[2018105 - deployed in mainNet, Tx ](https://etherscan.io/tx/0xc4ff13ee202ae7fb3304a0289bf48ea6ba995f742d058c7b0f3348f25d0240a6)
